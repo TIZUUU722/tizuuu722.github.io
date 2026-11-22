@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sabiqun Nahar | Personal Portfolio</title>
-    <meta name="description" content="Personal portfolio of Sabiqun Nahar, CSE undergraduate at Daffodil International University.">
+    <title>Sabiqun Nahar | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Sabiqun Nahar, CSE undergraduate and cybersecurity enthusiast.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255,255,255,0.94);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
         }
@@ -67,20 +67,19 @@
         }
 
         .logo {
-            font-size: 23px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--primary);
-            letter-spacing: -1px;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 22px;
             list-style: none;
         }
 
         .nav-links a {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text);
             transition: 0.3s;
@@ -97,7 +96,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 70px;
+            gap: 60px;
             padding-top: 65px;
             padding-bottom: 65px;
         }
@@ -130,8 +129,7 @@
         }
 
         .hero h3 {
-            font-size: 19px;
-            font-weight: 600;
+            font-size: 18px;
             color: var(--text);
         }
 
@@ -188,7 +186,7 @@
             object-position: center;
             border-radius: 150px 150px 25px 25px;
             border: 7px solid white;
-            box-shadow: 0 15px 45px rgba(56, 43, 120, 0.13);
+            box-shadow: 0 15px 45px rgba(56,43,120,0.13);
         }
 
         .image-decoration {
@@ -268,13 +266,7 @@
             font-weight: 600;
         }
 
-        /* EDUCATION */
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
+        /* CARDS */
 
         .card {
             background: white;
@@ -318,6 +310,14 @@
             font-weight: 700;
         }
 
+        /* EDUCATION */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
         /* SKILLS */
 
         .skills-section {
@@ -340,7 +340,6 @@
         .skill-box h3 {
             font-size: 17px;
             margin-bottom: 18px;
-            color: var(--dark);
         }
 
         .skill-list {
@@ -380,21 +379,11 @@
             font-size: 24px;
         }
 
-        .activity-card h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .activity-card p {
-            color: var(--text);
-            font-size: 14px;
-        }
-
         /* ACHIEVEMENTS */
 
         .achievement-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
@@ -403,6 +392,12 @@
             border: 1px solid var(--border);
             border-radius: 13px;
             padding: 25px;
+            transition: 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(50,40,100,0.07);
         }
 
         .achievement-card h3 {
@@ -414,6 +409,33 @@
         .achievement-card p {
             font-size: 14px;
             color: var(--text);
+        }
+
+        /* LANGUAGES */
+
+        .language-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .language-card h3 {
+            color: var(--primary);
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .language-card p {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         /* CONTACT */
@@ -534,7 +556,8 @@
 
             .education-grid,
             .skills-grid,
-            .achievement-grid {
+            .achievement-grid,
+            .language-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -552,7 +575,7 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 <header>
     <div class="container navbar">
         <a href="#home" class="logo">SN.</a>
@@ -564,14 +587,17 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#activities">Activities</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#languages">Languages</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- HERO -->
 <main>
+
+<!-- HERO -->
 <section class="container hero" id="home">
 
     <div class="hero-content">
@@ -582,10 +608,10 @@
         <h3>Computer Science & Engineering Undergraduate</h3>
 
         <p>
-            A CSE student at Daffodil International University with an interest
-            in cybersecurity, digital forensics, networking, and technology.
-            I am passionate about learning, exploring new ideas, and improving
-            my technical skills.
+            A CSE student at Daffodil International University with an
+            interest in cybersecurity, digital forensics, networking,
+            and technology. I am passionate about learning, exploring
+            new ideas, and improving my technical skills.
         </p>
 
         <div class="buttons">
@@ -596,7 +622,7 @@
 
     <div class="hero-image-wrapper">
         <img src="/images/profile.png"
-             alt="Portrait of Sabiqun Nahar"
+             alt="Sabiqun Nahar"
              class="hero-image">
         <div class="image-decoration"></div>
     </div>
@@ -617,14 +643,16 @@
             <p>
                 I am an undergraduate student of Computer Science and
                 Engineering at Daffodil International University.
-                Throughout my academic journey, I have developed foundational
-                knowledge of programming, computer networking, and cybersecurity.
+                Throughout my academic journey, I have developed
+                foundational knowledge of programming, computer
+                networking, and cybersecurity.
             </p>
 
             <p>
-                I am particularly interested in cybersecurity, digital forensics,
-                and OSINT. I enjoy learning new technologies, solving problems,
-                and participating in activities that help me develop personally
+                I am particularly interested in cybersecurity,
+                digital forensics, and OSINT. I enjoy learning
+                new technologies, solving problems, and participating
+                in activities that help me develop personally
                 and professionally.
             </p>
 
@@ -723,8 +751,8 @@
             <div class="skill-box">
                 <h3>Personal Skills</h3>
                 <div class="skill-list">
-                    <span class="skill-item">Teamwork</span>
                     <span class="skill-item">Communication</span>
+                    <span class="skill-item">Teamwork</span>
                     <span class="skill-item">Time Management</span>
                     <span class="skill-item">Adaptability</span>
                     <span class="skill-item">Event Volunteering</span>
@@ -735,7 +763,7 @@
     </div>
 </section>
 
-<!-- LEADERSHIP -->
+<!-- LEADERSHIP & ACTIVITIES -->
 <section id="activities">
     <div class="container">
 
@@ -753,9 +781,10 @@
                 <h3>Student Volunteer – Bangladesh Scouts</h3>
 
                 <p>
-                    Assisted in organizing school events, maintaining discipline,
-                    and supporting community activities. Participated in team
-                    drills, social service, and peer coordination.
+                    Assisted in organizing school events, maintaining
+                    discipline, and supporting community activities.
+                    Participated in team drills, social service,
+                    and peer coordination.
                 </p>
             </div>
         </div>
@@ -763,14 +792,14 @@
     </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- ACHIEVEMENTS & CERTIFICATES -->
 <section style="background: white;" id="achievements">
     <div class="container">
 
         <div class="section-heading">
             <span>Milestones</span>
-            <h2>Achievements & Training</h2>
-            <p>Some of my academic achievements and learning experiences.</p>
+            <h2>Achievements & Certificates</h2>
+            <p>My academic achievements and learning experiences.</p>
         </div>
 
         <div class="achievement-grid">
@@ -778,26 +807,65 @@
             <div class="achievement-card">
                 <h3>HSC Academic Achievement</h3>
                 <p>
-                    Achieved GPA 5.00 out of 5.00 in the Higher Secondary
-                    Certificate Examination, 2023.
+                    Achieved GPA 5.00 out of 5.00 in the Higher
+                    Secondary Certificate Examination, 2023.
                 </p>
             </div>
 
             <div class="achievement-card">
                 <h3>University Academic Progress</h3>
                 <p>
-                    Maintained a CGPA of 3.26 across four completed semesters
-                    at Daffodil International University.
+                    Maintained a CGPA of 3.26 across four completed
+                    semesters at Daffodil International University.
                 </p>
             </div>
 
             <div class="achievement-card">
-                <h3>Workshop Participation</h3>
+                <h3>Managing Depression and Low Mood</h3>
                 <p>
-                    Attended the workshop "Managing Depression and Low Mood",
-                    organized by the Psychological Service Unit, Office of
-                    the Students' Affairs, DIU, June 21, 2026.
+                    Participated in a workshop organized by the
+                    Psychological Service Unit, Office of the
+                    Students' Affairs, DIU, June 21, 2026.
                 </p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>Research Learning Session</h3>
+                <p>
+                    Certificate of Participation in
+                    "How to Choose a Research Topic and Start Research."
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>Communication</span>
+            <h2>Languages</h2>
+            <p>Languages I can communicate in and am currently learning.</p>
+        </div>
+
+        <div class="language-grid">
+
+            <div class="language-card">
+                <h3>English</h3>
+                <p>Good Communication Skills</p>
+            </div>
+
+            <div class="language-card">
+                <h3>Hindi</h3>
+                <p>Basic Communication</p>
+            </div>
+
+            <div class="language-card">
+                <h3>German</h3>
+                <p>Beginner – Currently Learning</p>
             </div>
 
         </div>
@@ -845,6 +913,7 @@
 
     </div>
 </section>
+
 </main>
 
 <!-- FOOTER -->
